@@ -1,0 +1,186 @@
+/* Genel Slider Stilleri */
+.sliderbodys {
+  margin: 0;
+  padding: 0;
+  height: 84vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #454545;
+  position: relative;
+}
+
+/* Slider Container */
+.sliderbodys .slider-container {
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  border: 5px solid lightgray;
+  overflow: hidden;
+}
+
+/* Image Container */
+.sliderbodys .image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* Slide */
+.sliderbodys .slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out, z-index 0s;
+  z-index: 1; /* Varsayılan olarak diğer slide'ların arkasında */
+}
+
+.sliderbodys .slide-active {
+  opacity: 1;
+  z-index: 2; /* Aktif slide, diğerlerinin önünde */
+}
+
+/* Resimler */
+.sliderbodys .slide-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Slide Text */
+.sliderbodys .slide-text {
+  position: absolute;
+  bottom: 10%;
+  left: 5%;
+  transform: translateX(-100%) scale(1);
+  color: white;
+  font-size: 22px;
+  background-color: rgba(0, 0, 0, 0.7); /* Arka plan rengi koyulaştırıldı */
+  padding: 20px;
+  border-radius: 15px;
+  max-width: 50%; /* Genişletilmiş alan */
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 3; /* Metin, diğer içeriğin üstünde */
+  transition: transform 0.7s ease-in-out, opacity 0.7s ease-in-out;
+}
+
+.sliderbodys .slide-active .slide-text {
+  transform: translateX(0) scale(1);
+  opacity: 1;
+}
+
+/* Read More Button */
+.sliderbodys .read-more-button {
+  color: #00bfff;
+  font-size: 18px;
+  margin-top: 10px;
+  text-decoration: none;
+  border: 2px solid #00bfff;
+  border-radius: 25px;
+  padding: 12px 20px;
+  background-color: transparent;
+  transition: background-color 0.3s, color 0.3s, transform 0.3s;
+  font-weight: bold;
+}
+
+.sliderbodys .read-more-button:hover {
+  background-color: #00bfff;
+  color: white;
+  transform: scale(1.1);
+}
+
+/* Navigation Arrows */
+.sliderbodys .nav-arrow {
+  position: absolute;
+  top: 50%;
+  color: white;
+  border: none;
+  font-size: 3rem;
+  cursor: pointer;
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 0.3s, transform 0.3s;
+  background: none;
+}
+
+.sliderbodys .nav-arrow.visible {
+  opacity: 1;
+}
+
+.sliderbodys .prev-arrow {
+  left: 20px;
+}
+
+.sliderbodys .next-arrow {
+  right: 20px;
+}
+
+.sliderbodys .nav-arrow:hover {
+  color: aqua;
+  transform: scale(1.2);
+}
+
+/* Responsive Ayarlar */
+@media (max-width: 768px) {
+  .sliderbodys {
+    height: 40vh; 
+  }
+
+  .sliderbodys .nav-arrow {
+    font-size: 2rem;
+    padding: 5px;
+  }
+
+  .sliderbodys .slide-text {
+    font-size: 15px;
+    left: 10%;
+    max-width: 50%;
+    max-height: 56%;
+  }
+
+  .sliderbodys .read-more-button {
+    font-size: 12px;
+    width: 50px;
+    height: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .sliderbodys {
+    height: 40vh; 
+  }
+
+  .sliderbodys .nav-arrow {
+    font-size: 1.5rem;
+    padding: 3px;
+  }
+
+  .sliderbodys .slide-text {
+    left: 5%;
+    max-width: 80%;
+    max-height: 35vh;
+
+    min-height: 100%;
+  }
+  .sliderbodys .slide-text p,a{
+    font-size: 5px;
+    max-width: 60%;
+  }
+
+  .sliderbodys .read-more-button{
+    width: 30px;
+    height: 15px;
+    font-size: 10px;
+  }
+}

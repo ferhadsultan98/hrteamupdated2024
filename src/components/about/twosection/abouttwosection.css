@@ -1,0 +1,106 @@
+/* Genel stil ayarları */
+.about-two-section {
+  padding: 4rem 1rem;
+  text-align: center;
+  background: #ffffff;
+  border-radius: 15px;
+  position: relative;
+}
+
+.about-two-section .container {
+  width: 90%;
+  margin: 0 auto;
+  position: relative;
+}
+
+.about-two-section .header {
+  margin-bottom: 2rem;
+}
+
+.about-two-section .logo {
+  max-width: 120px;
+  border-radius: 50%;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.about-two-section h1 {
+  color: #333;
+  font-size: 2.5rem;
+  margin: 1rem 0;
+}
+
+.about-two-section .intro-text {
+  color: #666;
+  font-size: 1.15rem;
+  margin-bottom: 3rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Hizmetler bölümü stil ayarları */
+.about-two-section .services {
+  margin-top: 3rem;
+}
+
+.about-two-section h2 {
+  color: #007bff;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+/* Hizmet kartları stil ayarları */
+.about-two-section .service-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  padding: 0 1rem;
+}
+
+.about-two-section .service-item {
+  background-size: cover;
+  background-position: center;
+  height: 220px;
+  width: 300px;
+  border-radius: 12px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.3s ease;
+  overflow: hidden;
+}
+
+.about-two-section .service-item:hover {
+  transform: scale(1.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  filter: brightness(0.9);
+}
+
+.about-two-section .service-content {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 0.5rem;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 400;
+  backdrop-filter: blur(8px);
+  max-width: 200px;
+}
+
+/* Neden Biz? bölümü stil ayarları */
+.about-two-section .why-choose-us {
+  margin-top: 3rem;
+}
+
+.about-two-section .why-choose-us p {
+  color: #666;
+  font-size: 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+  text-align: center;
+}

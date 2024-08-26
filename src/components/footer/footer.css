@@ -1,0 +1,227 @@
+/* Genel sıfırlama ve ayar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Footer container ayarları */
+.footer-container {
+  width: 100%;
+  background-color: rgb(0,123,255);
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+  position: relative;
+}
+.footer-container:hover{
+  backdrop-filter: sepia(90%);
+}
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.footer-section {
+  margin-bottom: 30px;
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-section h1 {
+  font-size: 22px;
+  margin-bottom: 20px;
+  color: white;
+  font-weight: 600;
+}
+
+/* Bağlantılar ayarları */
+.footer-section p a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section p a:hover {
+  color: rgb(24, 186, 96);
+}
+
+.footer-section p {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+/*  Social Medias */
+.social-medias {
+  display: inline-flex;
+  list-style: none;
+  padding-top: 40px;
+  font-family: "Poppins", sans-serif;
+  justify-content: center;
+  color: black;
+}
+
+.social-medias .icon {
+  position: relative;
+  background: #fff;
+  border-radius: 50%;
+  margin: 10px;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.social-medias .tooltip {
+  position: absolute;
+  top: 0;
+  font-size: 14px;
+  background: #fff;
+  color: #fff;
+  padding: 5px 8px;
+  border-radius: 5px;
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.social-medias .tooltip::before {
+  position: absolute;
+  content: "";
+  height: 8px;
+  width: 8px;
+  background: #fff;
+  bottom: -3px;
+  left: 50%;
+  transform: translate(-50%) rotate(45deg);
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.social-medias .icon:hover .tooltip {
+  top: -45px;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.social-medias .icon:hover span,
+.social-medias .icon:hover .tooltip {
+  text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+}
+
+.social-medias .facebook:hover,
+.social-medias .facebook:hover .tooltip,
+.social-medias .facebook:hover .tooltip::before {
+  background: #1877f2;
+  color: #fff;
+}
+
+.social-medias .twitter:hover,
+.social-medias .twitter:hover .tooltip,
+.social-medias .twitter:hover .tooltip::before {
+  background: #1da1f2;
+  color: #fff;
+}
+
+.social-medias .instagram:hover,
+.social-medias .instagram:hover .tooltip,
+.social-medias .instagram:hover .tooltip::before {
+  background: #e4405f;
+  color: #fff;
+}
+
+/* Abonelik formu */
+.subscribe-latest {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+  position: relative;
+}
+
+.subscribe-latest input {
+  width: 250px;
+  height: 40px;
+  padding: 0 15px;
+  font-size: 16px;
+  border: 2px solid white;
+  border-radius: 20px 0 0 20px;
+  outline: none;
+  color: white;
+  background: transparent;
+  transition: border-color 0.3s ease, width 0.3s ease;
+}
+
+.subscribe-latest input::placeholder {
+  color: white;
+}
+
+.subscribe-latest input:focus {
+  border-color: rgb(24, 186, 96);
+  width: 280px;
+}
+
+#subscribe-button {
+  width: 60px;
+  height: 40px;
+  font-size: 20px;
+  border: none;
+  border-radius: 0 20px 20px 0;
+  background-color: rgb(24, 186, 96);
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#subscribe-button:hover {
+  background-color: rgba(24, 186, 97, 0.766);
+  transform: scale(1.1);
+}
+
+/* Yatay çizgi */
+hr {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.4);
+  margin: 20px auto;
+}
+
+/* Telif hakkı */
+.copyright {
+  font-size: 14px;
+}
+
+.copyright a {
+  color: rgb(24, 186, 96);
+  text-decoration: none;
+}
+
+.copyright a:hover {
+  text-decoration: underline;
+}
+
+/* Media Queries */
+@media (max-width: 767px) {
+  .footer-content {
+    flex-direction: column;
+  }
+
+  .subscribe-latest input {
+    width: 200px;
+  }
+  
+  #subscribe-button {
+    width: 50px;
+  }
+}

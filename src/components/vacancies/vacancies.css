@@ -1,0 +1,189 @@
+/* Vacancies Two Section */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* İş İlanları Bölümü */
+.jobs {
+    padding: 50px 0;
+}
+
+.jobs h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2em;
+    color: #333;
+}
+
+.job-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.job {
+    perspective: 1000px; /* 3D görünüm için */
+    width: 300px; /* Kart genişliğini ayarla */
+}
+
+.job-card {
+    position: relative;
+    width: 100%;
+    height: 250px; /* Kart yüksekliği */
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.job-card.flipped {
+    transform: rotateY(180deg);
+}
+
+.job-content, .job-details {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.job-content {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.job-details {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transform: rotateY(180deg);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Kartın alt kısmında boşluk bırakmak için */
+.job-details .details-content {
+    flex: 1;
+}
+
+.job-details .back-button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 1em;
+    margin-top: 10px;
+}
+
+.job-details .back-button:hover {
+    background-color: #d32f2f;
+}
+
+/* Başvuru ve Detay Butonları */
+.apply-button,
+.details-button {
+    display: inline-block;
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 15px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    text-align: center;
+    margin-right: 10px;
+    position: relative;
+}
+
+.apply-button:hover,
+.details-button:hover {
+    background-color: #45a049;
+    transition: background-color 0.3s ease;
+}
+
+.details-button {
+    background-color: #2196F3;
+}
+
+.details-button:hover {
+    background-color: #1976D2;
+}
+
+/* İş ilanı başlığı ve ikon stili */
+.job-description {
+    display: flex;
+    align-items: center;
+    margin-bottom: 6px;
+}
+
+.job-icon {
+    font-size: 24px;
+    color: #4caf50;
+    margin-right: 15px;
+}
+
+.job-description h3 {
+    margin: 0;
+    color: #333;
+}
+
+/* Başvuru bildirim animasyonu */
+.job.applying {
+    position: relative; 
+    overflow: hidden;
+}
+
+.job.applying .notification-box {
+    position: absolute;
+    top: 0; 
+    left: 0;
+    width: 100%;
+    background-color: rgba(76, 175, 80, 0.9);
+    color: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    text-align: center;
+    transform: translateY(-100%);
+    animation: slideDownUp 3s ease forwards;
+    transition: 3s;
+}
+
+@keyframes slideDownUp {
+    0% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+}

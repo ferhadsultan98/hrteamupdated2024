@@ -1,0 +1,636 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont,
+    'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell,
+    'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Progress Bar */
+.progress-bar {
+  height: 5px;
+  background-color: #00A97F;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  transition: width 0.2s ease-out;
+}
+
+/* Top Header */
+.topheader {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15px;
+  background-color: rgb(246, 247, 248);
+  gap: 8vw;
+  transition: 1s;
+}
+
+.contactsu {
+  display: flex;
+  gap: 30px;
+}
+
+.topheader h3 {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.topheader a {
+  font-size: 18px;
+}
+
+.socials {
+  display: flex;
+  gap: 1.5vw;
+  align-items: center;
+  font-size: 20px;
+}
+
+.socials a {
+  text-decoration: none;
+  color: black;
+  transition: 0.7s;
+}
+
+.socials a:hover {
+  color: #00A97F;
+}
+
+.mails h3 a,
+.phone h3 a {
+  text-decoration: none;
+  color: black;
+  transition: 0.7s;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.mails h3 a:hover,
+.phone h3 a:hover {
+  color: #00A97F;
+}
+
+
+
+.LogoSide {
+  position: relative;
+  width: 120px;
+  overflow: hidden;
+  transition: 1s;
+}
+
+/* LogoSide Image */
+.LogoSide img {
+  width: 100%;
+  display: block;
+  transition: 1s;
+  /* Optional: for fade effects */
+}
+
+/* Pseudo-elements for borders */
+.LogoSide::before,
+.LogoSide::after {
+  content: "";
+  position: absolute;
+  background-color: #00A97F;
+  transition: all 0.5s ease;
+  z-index: 1;
+  border-radius: 10px;
+}
+
+/* Top border animation */
+.LogoSide::before {
+  top: 0;
+  left: 100%;
+  height: 2px;
+  width: 0;
+  transition: width 0.5s ease, left 0.5s ease;
+}
+
+/* Bottom border animation */
+.LogoSide::after {
+  bottom: 0;
+  left: -100%;
+  height: 2px;
+  width: 0;
+  transition: width 0.5s ease, left 0.5s ease;
+}
+
+/* Hover effect to animate borders */
+.LogoSide:hover::before {
+  left: 0;
+  width: 100%;
+}
+
+.LogoSide:hover::after {
+  left: 0;
+  width: 100%;
+}
+
+/* Optional: If you want to ensure the borders are visible on hover */
+.LogoSide:hover img {
+  opacity: 0.8;
+  filter: drop-shadow(0px 4px 3px rgba(0, 0, 255, 0.63))
+}
+
+.BottomHeader .Navbar {
+  list-style: none;
+  display: flex;
+  font-size: 20px;
+  font-weight: 600;
+  position: relative;
+  align-items: center;
+  gap: 3vw;
+}
+/* Bottom Header */
+.BottomHeader {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3vw;
+}
+.BottomHeader .Navbar a {
+  text-decoration: none;
+  color: black;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.BottomHeader .Navbar a::before {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #00A97F;
+  transition: width 0.3s ease-out;
+}
+
+.BottomHeader .Navbar a:hover::before {
+  width: 100%;
+}
+
+/* Button Styles */
+.hirebutton {
+  width: 100px;
+  padding: 10px;
+  position: relative;
+  display: block;
+  text-decoration: none;
+  overflow: hidden;
+  border: 0;
+  cursor: pointer;
+  border-radius: 2rem;
+  box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.5);
+
+}
+
+.hirebutton:hover .wave {
+  top: -120px;
+}
+
+.hirebutton .text {
+  position: relative;
+  z-index: 1;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.hirebutton .text a{
+  text-decoration: none;
+  color: white;
+}
+.hirebutton .wave {
+  width: 200px;
+  height: 200px;
+  background-color: #27a9ff;
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.5);
+  position: absolute;
+  left: 0;
+  top: -70px;
+  transition: 0.4s;
+}
+
+.hirebutton .wave::before,
+a .wave::after {
+  width: 200%;
+  height: 200%;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -75%);
+}
+
+.hirebutton .wave::before {
+  border-radius: 45%;
+  background-color: #0581b3;
+  animation: wave 5s linear infinite;
+}
+
+.hirebutton .wave::after {
+  border-radius: 40%;
+  background-color: rgba(20, 20, 20, 0.5);
+  animation: wave 10s linear infinite;
+}
+
+@keyframes wave {
+  0% {
+    transform: translate(-50%, -75%) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(-50%, -75%) rotate(300deg);
+  }
+}
+
+/* Dropdown Menu */
+.Navbar .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+
+
+.Navbar .dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 300px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 9999999999999999;
+  transform: translateY(10px);
+  opacity: 0;
+  transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+}
+
+.Navbar .dropdown-menu li {
+  list-style: none;
+  font-size: 15px;
+}
+
+.Navbar .dropdown-menu li a {
+  color: #000;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.Navbar .dropdown-menu li a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover with animation */
+.Navbar .dropdown:hover .dropdown-menu {
+  display: block;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Arrow Icon */
+.arrow-icon {
+  margin: 8px;
+  transition: transform 0.3s ease;
+  font-size: 20px;
+}
+
+/* Move arrow icon up on hover */
+.Navbar .dropdown:hover .arrow-icon {
+  transform: rotate(180deg);
+
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+  display: none;
+  font-size: 45px;
+  cursor: pointer;
+}
+
+.HamburgerAndLanguage {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+/* Language Dropdown Menu */
+.language-menu {
+  position: relative;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.language-menu button {
+  background: #f1f1f1;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.language-menu button img {
+  width: 24px;
+  height: 16px;
+}
+
+.language-dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #f9f9f9;
+  max-width: 40px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.language-dropdown li {
+  padding: 10px 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.language-dropdown li:hover {
+  background-color: #ddd;
+}
+
+.language-dropdown li img {
+  width: 24px;
+  /* Bayrağın genişliği */
+  height: 16px;
+  /* Bayrağın yüksekliği */
+  margin-right: 8px;
+  /* Bayrağın metinden uzaklığı */
+}
+
+.language-menu button:focus+.language-dropdown,
+.language-dropdown:hover {
+  display: block;
+}
+
+
+/* Search Overlay */
+.search-icon {
+  background-color: #ffffff;
+  border: 2px solid #cccccc;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.search-icon:hover {
+  background-color: #f0f0f0;
+  border-color: #999999;
+  transform: scale(1.1);
+}
+
+.search-icon:active {
+  background-color: #e0e0e0;
+  border-color: #666666;
+  transform: scale(0.95);
+}
+
+.search-icon b {
+  color: #333333;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+}
+
+/* Arama overlay'i */
+.search-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(173, 216, 230, 0.799);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Overlay aktif olduğunda */
+.search-overlay.active {
+  opacity: 1;
+  visibility: visible;
+  animation: colorFillIn 0.5s ease-out forwards;
+}
+
+/* Arama konteyneri */
+.search-overlay .search-container {
+  position: relative;
+  background: transparent;
+  padding: 20px;
+  border-radius: 12px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 4px 8px white;
+  transform: scale(0.9);
+  transition: transform 0.3s ease;
+}
+
+/* Konteyner aktif olduğunda */
+.search-overlay.active .search-container {
+  transform: scale(1);
+}
+
+/* Arama penceresi arka plan animasyonu açılış */
+@keyframes colorFillIn {
+  0% {
+    clip-path: polygon(100% 0, 100% 0, 0 0, 0 0);
+    background-color: rgba(173, 216, 230, 0.799);
+  }
+
+  100% {
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0);
+    background-color: rgba(0, 0, 0, 0.905);
+    /* İkinci aşamada renk değişimi */
+  }
+}
+
+/* Arama penceresi arka plan animasyonu kapanış */
+@keyframes colorFillOut {
+  100% {
+    clip-path: polygon(100% 0, 100% 0, 0 0, 0 0);
+    background-color: rgba(173, 216, 230, 0.799);
+  }
+
+  0% {
+    clip-path: polygon(100% 0, 100% 100%, 0 100%, 0 0);
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+}
+
+/* Overlay kapandığında */
+.search-overlay.not-active {
+  animation: colorFillOut 0.5s ease-out forwards;
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Kapama butonu */
+.search-overlay .close-button {
+  position: absolute;
+  top: 20px;
+  right: 0;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  font-size: 24px;
+  transition: 0.3s ease;
+}
+
+.search-overlay .close-button b {
+  color: black;
+  font-weight: 600;
+  font-size: 30px;
+}
+
+/* Arama inputu */
+.search-overlay .search-input {
+  padding: 10px;
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  box-shadow: 0 1px gray;
+  background-color: rgba(227, 209, 209, 0.518);
+  font-size: 18px;
+  transition: width 0.3s;
+  color: rgba(255, 255, 255, 0.784);
+  ;
+}
+
+.search-overlay .search-input::placeholder {
+  color: rgba(255, 255, 255, 0.784);
+  font-style: italic;
+}
+
+.search-overlay .search-input:focus {
+  width: 100%;
+}
+
+.search-overlay .search-container h2 {
+  margin-bottom: 15px;
+  font-size: 24px;
+  color: #333;
+}
+
+.search-overlay .search-container p {
+  color: #666;
+  font-size: 16px;
+}
+
+
+
+
+
+/* Media Query */
+@media (max-width: 897px) {
+  .topheader {
+    display: none;
+  }
+
+  .BottomHeader {
+    justify-content: space-between;
+  }
+
+  .BottomHeader .hirebutton {
+    display: none;
+  }
+
+  .BottomHeader .Navbar {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    /* Position below the header */
+    left: 0;
+    width: 100%;
+    background-color: #00A97F;
+    padding: 20px;
+    z-index: 1000000;
+  }
+
+  .Navbar li a:hover {
+    color: white;
+  }
+
+  .BottomHeader .Navbar.open {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .BottomHeader .Navbar li {
+    margin: 10px 0;
+  }
+
+  .BottomHeader .Navbar .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    transform: none;
+    opacity: 1;
+  }
+
+  .hamburger {
+    display: block;
+    z-index: 1000;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 920px) {
+  .topheader {
+    display: none;
+  }
+
+  .BottomHeader {
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1124px) {
+  .topheader {
+    display: none;
+  }
+
+  .BottomHeader {
+    justify-content: space-between;
+  }
+
+  .BottomHeader .hirebutton {
+    display: none;
+  }
+
+  .BottomHeader .Navbar a::before,
+  .BottomHeader .Navbar a::after {
+    background-color: white;
+  }
+}

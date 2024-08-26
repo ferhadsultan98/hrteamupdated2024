@@ -1,0 +1,36 @@
+{
+  "header": {
+    "homepage": "Home Page",
+    "about": "About Us",
+    "services": "Services",
+    "service1": "Human Resource Outsourcing",
+    "service2": "Recruitment Outsourcing",
+    "service3": "Manpower supply",
+    "service4": "Purchasing Outsourcing",
+    "service5": "Payroll Outsourcing",
+    "service6": "Accounting Outsourcing",
+    "service7": "Immigration Outsourcing",
+    "service8": "Training and evaluation",
+    "vacancies": "Vacancies",
+    "contact": "Contact",
+    "startbtn": "Hire me"
+  },
+  "main": {
+    "onecaption": "Human Resources Management: Effective strategies to increase productivity and ensure employee satisfaction.",
+    "twocaption": "Recruitment Processes: Innovative methods to select the best candidates and optimize recruitment processes.",
+    "threecaption": "Employee Development: Supporting employees' career goals through training and development programs."
+  },
+  "footer": {
+    "usefullinks": "Useful links",
+    "news": "News",
+    "support": "Support",
+    "latestupdate": "Latest updates",
+    "subs": "Subscribe to receive updates",
+    "maps": "Abdulvahab Salamzade Street, house 65a",
+    "inputholder": "Write an email"
+  },
+  "notfoundpage": {
+      "title": "Something went wrong!",
+      "backtomain": "Back to main page."
+  }
+}

@@ -1,0 +1,37 @@
+{
+    "header": {
+        "homepage": "Ana Səhifə",
+        "about": "Haqqımızda",
+        "services": "Xidmətlər",
+        "service1": "İnsan Resurslarının Autsorsinqi",
+        "service2": "İşə qəbul Autsorsinqi",
+        "service3": "İşçi qüvvəsi təchizatı",
+        "service4": "Satınalma Autsorsinqi",
+        "service5": "Əmək haqqının hesablanması Autsorsinqi",
+        "service6": "Mühasibatlıq Autsorsinqi",
+        "service7": "İmmiqrasiya Autsorsinqi",
+        "service8": "Təlim və qiymətləndirmə",
+        "vacancies": "Vakansiyalar",
+        "contact": "Əlaqə",
+        "startbtn": "İşə başlayın"
+    },
+    "main": {
+        "onecaption": "İnsan Resurslarının İdarə Edilməsi: Məhsuldarlığı artırmaq və işçilərin məmnuniyyətini təmin etmək üçün effektiv strategiyalar.",
+        "twocaption": "İşə qəbul prosesləri: Ən yaxşı namizədləri seçmək və işə qəbul proseslərini optimallaşdırmaq üçün innovativ üsullar.",
+        "threecaption": "İşçilərin İnkişafı: Təlim və inkişaf proqramları vasitəsilə işçilərin karyera məqsədlərinə dəstək."
+    },
+    "footer": {
+        "info": "Əlaqə",
+        "usefullinks": "Vacib keçidlər",
+        "news": "Yeniliklər",
+        "support": "Dəstək",
+        "latestupdate": "Son yeniliklər",
+        "subs": "Yeniliklərdən xəbərdar olmaq üçün abunə olun",
+        "maps": "Abdulvahab Salamzadə küçəsi ev 65a",
+        "inputholder": "Email yazın"
+    },
+    "notfoundpage": {
+        "title": "Nə isə səhv getdi!",
+        "backtomain": "İlkin səhifəyə qayıt."
+    }
+}

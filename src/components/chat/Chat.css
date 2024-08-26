@@ -1,0 +1,141 @@
+.chat-widget {
+    position: fixed;
+    bottom: 20px;   
+    right: 20px;    
+    z-index: 999999999999000;   
+}
+
+
+.chat-button {
+    background-color: #007bff; 
+    color: white;            
+    border: none;           
+    border-radius: 50%;    
+    padding: 10px 10px;    
+    cursor: pointer;   
+    font-size: 38px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.3s; 
+    width: 60px;
+    height: 60px;
+    animation: messageBounce 1s ease-in-out infinite;
+}
+@keyframes messageBounce {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-6px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+.chat-button:hover {
+    background-color: #0056b3; /* Üzerine gelince arka plan rengini değiştir */
+    transform: scale(1.05); /* Hover durumunda butonu büyüt */
+}
+
+.chat-box {
+    background-color: #fff;    /* Arka plan rengi */
+    border: 1px solid #ddd;    /* Kenarlık rengi */
+    border-radius: 5px;        /* Köşe yuvarlama */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Gölge efekti */
+    width: 300px;              /* Sabit genişlik */
+    max-height: 400px;         /* Maksimum yükseklik */
+    overflow-y: auto;          /* İçerik taşarsa kaydırma çubuğu ekler */
+    position: relative;        /* İçerik düzeni */
+}
+
+.chat-header {
+    background-color: #007bff; /* Üst başlık arka plan rengi */
+    color: white;              /* Yazı rengi */
+    padding: 10px;            /* İç boşluk */
+    border-top-left-radius: 5px;  /* Köşe yuvarlama */
+    border-top-right-radius: 5px; /* Köşe yuvarlama */
+    position: relative;        /* İçerik düzeni */
+}
+
+.close-button {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
+    transition: color 0.3s;
+}
+
+.close-button:hover {
+    color: #ffdddd; /* Hover durumunda renk değişimi */
+}
+
+.chat-messages {
+    padding: 10px;            /* İç boşluk */
+    height: 300px;            /* Mesajların görülebileceği yükseklik */
+    overflow-y: auto;         /* İçerik taşarsa kaydırma çubuğu ekler */
+}
+
+.message {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px; /* Mesajlar arasındaki boşluk */
+}
+
+.message-icon {
+    font-size: 24px; /* İkon boyutu */
+    margin-right: 10px; /* İkon ile mesaj arasındaki boşluk */
+}
+
+.message-text {
+    background-color: #f1f1f1; /* Mesaj arka plan rengi */
+    border-radius: 10px; /* Köşe yuvarlama */
+    padding: 10px; /* İç boşluk */
+    max-width: 80%; /* Maksimum genişlik */
+}
+
+.message.user .message-text {
+    background-color: #007bff; /* Kullanıcı mesajı arka plan rengi */
+    color: white; /* Kullanıcı mesajı yazı rengi */
+    text-align: right; /* Kullanıcı mesajları sağda */
+}
+
+.message.bot .message-text {
+    background-color: #eee; /* Bot mesajı arka plan rengi */
+    color: #333; /* Bot mesajı yazı rengi */
+    text-align: left; /* Bot mesajları solda */
+}
+
+.waiting-message {
+    margin-top: 10px;
+    color: #888; /* Bekleme mesajı rengi */
+    font-style: italic; /* Bekleme mesajı için italik stil */
+}
+
+.messagebuttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2px;
+}
+
+.messagebuttons button {
+    padding: 10px 5px;
+    font-weight: 600;
+    border: none;
+    background-color: #337AB7;
+    color: white;
+}
+
+.chat-input {
+    width: calc(100% - 20px); /* Butonun genişliğine göre ayar */
+    padding: 10px;            /* İç boşluk */
+    border: 1px solid #ddd;   /* Kenarlık rengi */
+    border-bottom-left-radius: 5px; /* Köşe yuvarlama */
+    border-bottom-right-radius: 5px; /* Köşe yuvarlama */
+}

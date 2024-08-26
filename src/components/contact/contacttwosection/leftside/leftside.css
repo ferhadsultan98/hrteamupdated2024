@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  
+  /* Contact LeftSide Started*/
+  .ContactLeftContainer{
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+  }
+  .ContactLeftContainer button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .Info {
+    margin-top: 20px;
+    max-width: 35vw;
+  }
+  
+  .Info h1 {
+    font-size: 38px;
+    margin-bottom: 10px;
+    display: flex;
+    gap: 6px;
+  }
+  
+  .Info h1 h1 {
+    color: #4CAF50;
+  }
+  
+  .Info p {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+  
+  .InfoOne {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    width: 100%;
+  }
+  .InfoOne a{
+    text-decoration: none;
+    color: black;
+  }
+  .InfoOne .adressbar .iconn {
+    font-size: 20px;
+    background-color: #4CAF50;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+  }
+  
+  .InfoTwo {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    width: 100%;
+  }
+  .InfoTwo a{
+    text-decoration: none;
+    color: black;
+  }
+  .InfoTwo .adressbar  .iconn{
+    font-size: 20px;
+    background-color: #4CAF50;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+  }
+  
+  .adressbar {
+    display: flex;
+    margin-bottom: 20px;
+    cursor: pointer;
+    gap: 10px;
+  }
+  
+  .adressbar:hover .buttons {
+    background-color: orange;
+  }
+  
+  .adressbar .adres h3 {
+    transition: 0.6s;
+  }
+  
+  .adressbar:hover .adres h3 {
+    color: orange;
+  }
+  
+  .adress h3 {
+    margin-bottom: 5px;
+  }
+  
+  .adress p {
+    font-size: 16px;
+  }
+  
+  .Map {
+    width: 100%;
+    height: 30vh;
+    border-radius: 10px;
+    box-shadow: 1px 10px 25px gray;
+  }
+  @media (max-width: 767px){
+    .Info h1{
+      flex-direction: column;
+    }
+  }

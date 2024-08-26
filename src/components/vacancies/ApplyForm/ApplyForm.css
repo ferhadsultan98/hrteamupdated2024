@@ -1,0 +1,114 @@
+/* Genel Konteyner */
+.job-application {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+  transition: all 0.3s ease;
+}
+
+.job-application:hover {
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  border-color: #00bcd4;
+}
+
+/* Başlık */
+.job-application h2 {
+  text-align: center;
+  color: #333;
+  font-family: 'Poppins', sans-serif;
+  font-size: 24px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.job-application h2::before {
+  content: '';
+  display: block;
+  height: 4px;
+  width: 60px;
+  background: #00bcd4;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+/* Form */
+.job-application form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Etiketler */
+.job-application label {
+  margin-top: 15px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  color: #555;
+}
+
+/* Girdi Alanları */
+.job-application input[type="text"],
+.job-application input[type="email"],
+.job-application input[type="file"] {
+  padding: 12px;
+  margin-top: 5px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.job-application input[type="text"]:focus,
+.job-application input[type="email"]:focus,
+.job-application input[type="file"]:focus {
+  border-color: #00bcd4;
+  box-shadow: 0 0 8px rgba(0, 188, 212, 0.3);
+  outline: none;
+}
+
+/* Gönder Butonu */
+.job-application button {
+  margin-top: 20px;
+  padding: 12px;
+  border: none;
+  background-color: #00bcd4;
+  color: #ffffff;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  font-family: 'Poppins', sans-serif;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  position: relative;
+}
+
+.job-application button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  transition: opacity 0.3s ease;
+  opacity: 0;
+  z-index: 1;
+}
+
+.job-application button:hover::after {
+  opacity: 1;
+}
+
+.job-application button:hover {
+  background-color: #0097a7;
+  transform: translateY(-2px);
+}
+
+.job-application button:active {
+  background-color: #007c8c;
+  transform: translateY(0);
+}
