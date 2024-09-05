@@ -23,60 +23,96 @@
 .topheader {
   display: flex;
   justify-content: space-around;
+  gap: 10vw;
   align-items: center;
-  padding: 15px;
-  background-color: rgb(246, 247, 248);
-  gap: 8vw;
-  transition: 1s;
+  padding: 20px 40px;
+  background: linear-gradient(135deg, #00A97F, #009966);
+  color: white;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.contactsu {
-  display: flex;
-  gap: 30px;
+/* Background animation */
+.topheader::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(0,0,0,0) 70%);
+  animation: backgroundAnimation 4s infinite ease-in-out;
+  z-index: 0;
 }
 
-.topheader h3 {
+@keyframes backgroundAnimation {
+  0% { transform: translateX(-50%) translateY(-50%); }
+  50% { transform: translateX(50%) translateY(50%); }
+  100% { transform: translateX(-50%) translateY(-50%); }
+}
+
+.topheader .contactsu, .topheader .socials {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 20px;
+  z-index: 1;
 }
 
-.topheader a {
+/* Contact Details */
+.topheader .contactsu {
+  display: flex;
+  gap: 20px;
+}
+
+.topheader .contactsu h3 {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: color 0.3s ease;
+}
+
+.topheader .contactsu a {
+  color: white;
+  text-decoration: none;
+}
+
+.topheader .contactsu a:hover {
+  color: #e0f7fa;
+}
+
+/* Social Media Icons */
+.topheader .socials {
+  display: flex;
+  gap: 20px;
+}
+
+.topheader .socials a {
+  color: white;
   font-size: 18px;
+  transition: color 0.3s ease;
 }
 
-.socials {
-  display: flex;
-  gap: 1.5vw;
-  align-items: center;
-  font-size: 20px;
+.topheader .socials a:hover {
+  color: #e0f7fa;
 }
 
-.socials a {
-  text-decoration: none;
-  color: black;
-  transition: 0.7s;
-}
+/* Responsive Design */
+@media (max-width: 768px) {
+  .topheader {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+  }
 
-.socials a:hover {
-  color: #00A97F;
+  .topheader .contacts, .topheader .socials {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
-
-.mails h3 a,
-.phone h3 a {
-  text-decoration: none;
-  color: black;
-  transition: 0.7s;
-  display: flex;
-  align-items: center;
-  gap: 3px;
-}
-
-.mails h3 a:hover,
-.phone h3 a:hover {
-  color: #00A97F;
-}
-
 
 
 .LogoSide {
@@ -169,7 +205,7 @@
 .BottomHeader .Navbar a::before {
   content: "";
   position: absolute;
-  bottom: -5px;
+  bottom: -3px;
   left: 0;
   width: 0;
   height: 2px;
@@ -182,7 +218,7 @@
 }
 
 /* Button Styles */
-.hirebutton {
+.BottomHeader .hirebutton {
   width: 100px;
   padding: 10px;
   position: relative;
@@ -193,14 +229,13 @@
   cursor: pointer;
   border-radius: 2rem;
   box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.5);
-
 }
 
-.hirebutton:hover .wave {
+.BottomHeader .hirebutton:hover .wave {
   top: -120px;
 }
 
-.hirebutton .text {
+.BottomHeader .hirebutton .text {
   position: relative;
   z-index: 1;
   color: white;
@@ -208,11 +243,11 @@
   font-weight: 600;
 }
 
-.hirebutton .text a{
+.BottomHeader .hirebutton .text a{
   text-decoration: none;
   color: white;
 }
-.hirebutton .wave {
+.BottomHeader .hirebutton .wave {
   width: 200px;
   height: 200px;
   background-color: #27a9ff;
@@ -223,8 +258,8 @@
   transition: 0.4s;
 }
 
-.hirebutton .wave::before,
-a .wave::after {
+.BottomHeader .hirebutton .wave::before,
+.BottomHeader a .wave::after {
   width: 200%;
   height: 200%;
   content: "";
@@ -234,13 +269,13 @@ a .wave::after {
   transform: translate(-50%, -75%);
 }
 
-.hirebutton .wave::before {
+.BottomHeader .hirebutton .wave::before {
   border-radius: 45%;
   background-color: #0581b3;
   animation: wave 5s linear infinite;
 }
 
-.hirebutton .wave::after {
+.BottomHeader .hirebutton .wave::after {
   border-radius: 40%;
   background-color: rgba(20, 20, 20, 0.5);
   animation: wave 10s linear infinite;
@@ -262,7 +297,11 @@ a .wave::after {
   display: inline-block;
 }
 
+.Navbar .dropdown .link{
+  display: flex;
+  align-items: center;
 
+}
 
 .Navbar .dropdown-menu {
   display: none;
@@ -270,10 +309,11 @@ a .wave::after {
   background-color: #fff;
   min-width: 300px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 9999999999999999;
+  z-index: -1;
   transform: translateY(10px);
   opacity: 0;
   transition: transform 0.3s ease-out, opacity 0.3s ease-out;
+  z-index: 999999999999;
 }
 
 .Navbar .dropdown-menu li {
@@ -283,7 +323,7 @@ a .wave::after {
 
 .Navbar .dropdown-menu li a {
   color: #000;
-  padding: 12px 16px;
+  padding: 12px 18px;
   text-decoration: none;
   display: block;
 }
@@ -303,7 +343,9 @@ a .wave::after {
 .arrow-icon {
   margin: 8px;
   transition: transform 0.3s ease;
-  font-size: 20px;
+  font-size: 25px;
+  display: flex;
+  align-items: center;
 }
 
 /* Move arrow icon up on hover */
@@ -330,6 +372,7 @@ a .wave::after {
   position: relative;
   display: inline-block;
   margin-right: 5px;
+  z-index: 9999;
 }
 
 .language-menu button {
@@ -354,7 +397,6 @@ a .wave::after {
   background-color: #f9f9f9;
   max-width: 40px;
   box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 9999;
   list-style: none;
   padding: 0;
   margin: 0;
@@ -369,6 +411,7 @@ a .wave::after {
 
 .language-dropdown li:hover {
   background-color: #ddd;
+  
 }
 
 .language-dropdown li img {
@@ -428,9 +471,10 @@ a .wave::after {
   height: 100%;
   background: rgba(173, 216, 230, 0.799);
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  z-index: 10000;
+  z-index: 999999999999;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease;
@@ -547,6 +591,65 @@ a .wave::after {
 .search-overlay .search-container p {
   color: #666;
   font-size: 16px;
+}
+/* News Section */
+.news-section {
+  margin-top: 20px;
+}
+
+.news-section h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* News Cards */
+.news-cards {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+}
+
+.news-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  width: 250px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.news-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.news-card p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.news-card a {
+  text-decoration: none;
+  color: #00A97F;
+  font-weight: bold;
+}
+
+.news-card a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design for News Section */
+@media (max-width: 768px) {
+  .news-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .news-card {
+    width: 100%;
+  }
 }
 
 

@@ -20,7 +20,7 @@ let VacanciesTwoSection = () => {
     setApplyingJobId(jobId);
     setTimeout(() => {
       setApplyingJobId(null);
-    }, 3000); // Bildirim 3 saniye sürecek
+    }, 3000); 
   };
 
   const handleDetails = (event, jobId) => {
@@ -37,7 +37,7 @@ let VacanciesTwoSection = () => {
     <div className="VacApp">
       <section id="jobs" className="jobs">
         <div className="container">
-          <h2>Öne Çıkan İş İlanları</h2>
+          <h2>Seçim İş İlanları</h2>
           <div className="job-list" id="job-list">
             {jobsData.jobs.map(job => (
               <div className={`job ${applyingJobId === job.id ? 'applying' : ''}`} key={job.id}>
@@ -50,43 +50,47 @@ let VacanciesTwoSection = () => {
                           {job.title}
                         </h3>
                         <p>{job.description}</p>
-                        <p><strong>Şirket:</strong> {job.company}</p>
+                        <p><strong>Şirkət:</strong> {job.company}</p>
                         <p><strong>Maaş:</strong> {job.salary}</p>
                       </div>
                     </div>
                     {applyingJobId === job.id && (
                       <div className="notification-box">
-                        <p>Başvurunuz alındı!</p>
+                        <p>Müraciətiniz qəbul edildi!</p>
                       </div>
                     )}
+                    <span>
                     <a 
                       href="#" 
                       className="apply-button"
                       onClick={(e) => handleApply(e, job.id)}
                     >
-                      Başvur
+                      Müraciət Et
                     </a>
+                    </span>
+                    <span>
                     <a 
                       href="#" 
                       className="details-button" 
                       onClick={(e) => handleDetails(e, job.id)}
                     >
-                      Detayları Gör
+                      Təfərrüatları Gör
                     </a>
+                    </span>
                   </div>
                   {selectedJobId === job.id && (
                     <div className="job-details">
                       <div className="details-content">
-                        <h4>İş İlanı Detayları</h4>
-                        <p><strong>Lokasyon:</strong> {job.location}</p>
-                        <p><strong>Tecrübe:</strong> {job.experience}</p>
-                        <p className="job-date"><strong>İlan Tarihi:</strong> {job.postedDate}</p>
-                        <p className="job-date"><strong>Bitiş Tarihi:</strong> {job.expiryDate}</p>
-                        <p><strong>Talepler:</strong> {job.requirements}</p>
+                        <h4>İş İlanı Təfərrüatları</h4>
+                        <p><strong>Yerləşmə:</strong> {job.location}</p>
+                        <p><strong>Təcrübə:</strong> {job.experience}</p>
+                        <p className="job-date"><strong>İlkin Tarix:</strong> {job.postedDate}</p>
+                        <p className="job-date"><strong>Bitmə Tarixi:</strong> {job.expiryDate}</p>
+                        <p><strong>Tələblər:</strong> {job.requirements}</p>
                         <p><strong>Dil Bilgisi:</strong> {job.languages}</p>
-                        <p><strong>İletişim:</strong> {job.contact}</p>
-                        <p><strong>Çalışma Saatleri:</strong> {job.workHours}</p>
-                        <p><strong>Çalışma Günleri:</strong> {job.days}</p>
+                        <p><strong>Əlaqə:</strong> {job.contact}</p>
+                        <p><strong>İş Saatları:</strong> {job.workHours}</p>
+                        <p><strong>İş Günləri:</strong> {job.days}</p>
                       </div>
                       <button className="back-button" onClick={handleBack}>
                         Geri Dön

@@ -68,7 +68,7 @@
     color: #212529;
     margin-bottom: 20px;
     position: relative;
-    z-index: 1; /* Ensure text is above background decoration */
+    z-index: 1; 
 }
 
 /* Description text below the heading */
@@ -86,7 +86,7 @@
     gap: 15px;
     cursor: pointer;
     position: relative;
-    z-index: 1; /* Ensure dots are above background decoration */
+    z-index: 1; 
 }
 
 .testimonial-section .dot {
@@ -99,16 +99,16 @@
 
 .testimonial-section .dot.active {
     background-color: #00bfa6;
-    transform: scale(1.2); /* Enlarge active dot */
+    transform: scale(1.2); 
 }
 
 /* Right side of the section containing the slider */
 .testimonial-section .testimonial-right {
     width: 100%;
-    max-width: 1200px; /* Increased max width for more space */
+    max-width: 1200px; 
     position: relative;
     overflow: hidden;
-    padding: 60px; /* Adjusted padding */
+    padding: 60px; 
     box-sizing: border-box;
 }
 
@@ -117,80 +117,80 @@
     display: none !important;
 }
 
-/* Slider container to manage card overflow */
+
 .testimonial-section .slick-slider {
     overflow: hidden;
 }
 
-/* Each testimonial card within the slider */
+
 .testimonial-section .testimonial-card {
     background-color: #ffffff;
-    padding: 20px; /* Reduced padding for better fit on smaller screens */
+    padding: 20px; 
     border-radius: 12px;
     text-align: center;
     position: relative;
-    width: calc(100% - 20px); /* Adjust width to account for margin */
+    width: calc(100% - 20px); 
     box-sizing: border-box;
-    margin: 0 10px; /* Space out the cards */
+    margin: 0 10px; 
     display: flex;
-    flex-direction: column; /* Ensure content stacks vertically */
-    gap: 15px; /* Reduced gap for better fit */
+    flex-direction: column; 
+    gap: 15px; 
 }
 
-/* Header part of the card where the image is placed */
+
 .testimonial-section .testimonial-card-header {
     position: relative;
     padding: 8px;
     border-radius: 50%;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-    margin: 0 auto; /* Center the image horizontally */
+    margin: 0 auto; 
     all: unset;
 }
 
 /* Image of the testimonial author */
 .testimonial-section .testimonial-image {
-    width: 80px; /* Reduced size for better fit on smaller screens */
+    width: 80px; 
     height: 80px;
     border-radius: 50%;
     object-fit: cover;
     border: 4px solid #00bfa6;
 }
 
-/* Body part of the card containing the testimonial text and author info */
+
 .testimonial-section .testimonial-card-body {
-    margin-top: 20px; /* Adjusted margin to ensure content is well positioned */
+    margin-top: 20px; 
 }
 
-/* Star rating display within the card */
+
 .testimonial-section .testimonial-rating {
     color: #ff9800;
-    font-size: 20px; /* Reduced size for better fit */
-    margin-bottom: 10px; /* Reduced space */
+    font-size: 20px; 
+    margin-bottom: 10px; 
 }
 
 /* Testimonial text */
 .testimonial-section .testimonial-text {
-    font-size: 16px; /* Adjusted size for better fit */
+    font-size: 16px; 
     color: #495057;
     margin-bottom: 10px;
     line-height: 1.6;
 }
 
-/* Name of the person who gave the testimonial */
+
 .testimonial-section .testimonial-name {
     font-weight: 700;
-    font-size: 18px; /* Adjusted size for better fit */
+    font-size: 18px; 
     margin-bottom: 5px;
     color: #212529;
 }
 
-/* Title or role of the testimonial author */
+
 .testimonial-section .testimonial-title {
     color: #868e96;
-    font-size: 14px; /* Adjusted size for better fit */
+    font-size: 14px; 
 }
 
-/* Responsive adjustments */
+
 @media (max-width: 768px) {
     .testimonial-section {
         flex-direction: column;
@@ -204,20 +204,20 @@
     }
 
     .testimonial-section .background-container {
-        width: 100%; /* Ensure background container is full width */
-        padding: 15px; /* Adjust padding */
+        width: 100%;
+        padding: 15px; 
     }
 
     .testimonial-section .testimonial-right {
-        padding: 20px; /* Adjusted padding for smaller screens */
+        padding: 20px; 
     }
 
     .testimonial-section .testimonial-card {
-        padding: 15px; /* Adjusted padding */
+        padding: 15px; 
     }
 
     .testimonial-section .testimonial-image {
-        width: 70px; /* Reduced size for smaller screens */
+        width: 70px; 
         height: 70px;
     }
 }

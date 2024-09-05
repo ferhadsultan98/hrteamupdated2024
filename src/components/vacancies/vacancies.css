@@ -1,14 +1,5 @@
 /* Vacancies Two Section */
-
-
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -19,7 +10,7 @@ body {
     margin: 0 auto;
 }
 
-/* İş İlanları Bölümü */
+
 .jobs {
     padding: 50px 0;
 }
@@ -39,14 +30,14 @@ body {
 }
 
 .job {
-    perspective: 1000px; /* 3D görünüm için */
-    width: 300px; /* Kart genişliğini ayarla */
+    perspective: 1000px; 
+    width: 400px; 
 }
 
 .job-card {
     position: relative;
     width: 100%;
-    height: 250px; /* Kart yüksekliği */
+    height: 250px;
     transition: transform 0.6s;
     transform-style: preserve-3d;
 }
@@ -83,7 +74,7 @@ body {
     justify-content: space-between;
 }
 
-/* Kartın alt kısmında boşluk bırakmak için */
+
 .job-details .details-content {
     flex: 1;
 }
@@ -104,7 +95,6 @@ body {
     background-color: #d32f2f;
 }
 
-/* Başvuru ve Detay Butonları */
 .apply-button,
 .details-button {
     display: inline-block;
@@ -133,7 +123,7 @@ body {
     background-color: #1976D2;
 }
 
-/* İş ilanı başlığı ve ikon stili */
+
 .job-description {
     display: flex;
     align-items: center;
@@ -151,7 +141,7 @@ body {
     color: #333;
 }
 
-/* Başvuru bildirim animasyonu */
+
 .job.applying {
     position: relative; 
     overflow: hidden;

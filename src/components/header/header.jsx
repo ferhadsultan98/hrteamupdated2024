@@ -162,20 +162,40 @@ const Header = () => {
       </div>
 
       {isSearchVisible && (
-        <div className={`search-overlay ${isSearchVisible ? 'active' : 'not-active'}`}>
-          <button className="close-button" onClick={handleCloseSearch}><b><AiTwotoneCloseCircle /></b></button>
-          <div className="search-container"
-            data-aos="fade-up"
-            data-aos-duration="3000"
-            data-aos-delay="400">
-            <input
-              type="text"
-              className="search-input"
-              placeholder="Search..."
-            />
+  <div className={`search-overlay ${isSearchVisible ? 'active' : 'not-active'}`}>
+    <button className="close-button" onClick={handleCloseSearch}><b><AiTwotoneCloseCircle /></b></button>
+    <div className="search-container"
+      data-aos="fade-up"
+      data-aos-duration="3000"
+      data-aos-delay="400">
+      <input
+        type="text"
+        className="search-input"
+        placeholder="Search..."
+      />
+    </div>
+    <div className="news-section">
+        <h2>Latest HR News</h2>
+        <div className="news-cards">
+          <div className="news-card">
+            <h3>News Title 1</h3>
+            <p>Brief description of the news article. This is where the summary goes.</p>
+            <a href="#">Read more</a>
+          </div>
+          <div className="news-card">
+            <h3>News Title 2</h3>
+            <p>Brief description of the news article. This is where the summary goes.</p>
+            <a href="#">Read more</a>
+          </div>
+          <div className="news-card">
+            <h3>News Title 3</h3>
+            <p>Brief description of the news article. This is where the summary goes.</p>
+            <a href="#">Read more</a>
           </div>
         </div>
-      )}
+      </div>
+  </div>
+)}
     </header>
   );
 };

@@ -55,7 +55,7 @@ const TestimonialSlider = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const sliderRef = useRef(null);
 
-  // Settings for the slider
+
   const settings = {
     dots: false,
     infinite: true,
@@ -68,7 +68,7 @@ const TestimonialSlider = () => {
   };
 
   const handleDotClick = (index) => {
-    sliderRef.current.slickGoTo(index * 2); // Go to the correct slide index
+    sliderRef.current.slickGoTo(index * 2); 
     setActiveIndex(index);
   };
 
@@ -76,7 +76,7 @@ const TestimonialSlider = () => {
     <div className="testimonial-section">
       <div className="testimonial-left">
         <h3 className="section-title">Şirkətimiz haqqında fikirlər</h3>
-        <p className="section-description">Quisque commodo, magna simply free text available nec accu man euismod tellus mi ornare enim.</p>
+        <p className="section-description">Şirkət 2021-ci ildə qurulub.</p>
         <div className="custom-dots">
           {Array.from({ length: Math.ceil(testimonials.length / 2) }).map((_, index) => (
             <span

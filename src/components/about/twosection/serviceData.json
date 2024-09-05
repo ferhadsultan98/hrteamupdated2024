@@ -1,39 +1,38 @@
 [
-    {
-      "title": "Human Resource Outsourcing",
-      "img": ".src/assets/servicesicons/humanautsorcing.jpg"
-    },
-    {
-      "title": "Recruitment Outsourcing",
-      "img": "/src/assets/servicesicons/workautosorcing.jpg"
-    },
-    {
-      "title": "Manpower Supply",
-      "img": "./src/assets/servicesicons/autstaffing.png"
-    },
-    {
-      "title": "Purchasing Outsourcing",
-      "img": "./src/assets/servicesicons/procurementoutsorcing.jpg"
-    },
-    {
-      "title": "Payroll Outsourcing",
-      "img": "./src/assets/servicesicons/payroll-scaled.jpg"
-    },
-    {
-      "title": "Accounting Outsourcing",
-      "img": "./src/assets/servicesicons/account-outsorcing.jpg"
-    },
-    {
-      "title": "Immigration Outsourcing",
-      "img": "./src/assets/servicesicons/immigrationtraveloutsrc.jpg"
-    },
-    {
-      "title": "Training and Evaluation",
-      "img": "./src/assets/servicesicons/training.jpg"
-    },
-    {
-      "title": "Legal Consulting",
-      "img": "./src/assets/servicesicons/lawservices.jpg"
-    }
-  ]
-  
+  {
+    "title": "Human Resource Outsourcing",
+    "img": ".src/assets/servicesicons/humanautsorcing.jpg"
+  },
+  {
+    "title": "Recruitment Outsourcing",
+    "img": ".src/assets/servicesicons/workautosorcing.jpg"
+  },
+  {
+    "title": "Manpower Supply",
+    "img": ".src/assets/servicesicons/autstaffing.png"
+  },
+  {
+    "title": "Purchasing Outsourcing",
+    "img": ".src/assets/servicesicons/procurementoutsorcing.jpg"
+  },
+  {
+    "title": "Payroll Outsourcing",
+    "img": ".src/assets/servicesicons/payroll-scaled.jpg"
+  },
+  {
+    "title": "Accounting Outsourcing",
+    "img": ".src/assets/servicesicons/account-outsorcing.jpg"
+  },
+  {
+    "title": "Immigration Outsourcing",
+    "img": ".src/assets/servicesicons/immigrationtraveloutsrc.jpg"
+  },
+  {
+    "title": "Training and Evaluation",
+    "img": ".src/assets/servicesicons/training.jpg"
+  },
+  {
+    "title": "Legal Consulting",
+    "img": ".src/assets/servicesicons/lawservices.jpg"
+  }
+]

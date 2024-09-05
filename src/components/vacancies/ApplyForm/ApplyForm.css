@@ -1,4 +1,4 @@
-/* Genel Konteyner */
+
 .job-application {
   max-width: 600px;
   margin: 40px auto;
@@ -14,7 +14,7 @@
   border-color: #00bcd4;
 }
 
-/* Başlık */
+
 .job-application h2 {
   text-align: center;
   color: #333;
@@ -37,13 +37,13 @@
   border-radius: 2px;
 }
 
-/* Form */
+
 .job-application form {
   display: flex;
   flex-direction: column;
 }
 
-/* Etiketler */
+
 .job-application label {
   margin-top: 15px;
   font-family: 'Poppins', sans-serif;
@@ -51,7 +51,7 @@
   color: #555;
 }
 
-/* Girdi Alanları */
+
 .job-application input[type="text"],
 .job-application input[type="email"],
 .job-application input[type="file"] {
@@ -70,7 +70,7 @@
   outline: none;
 }
 
-/* Gönder Butonu */
+
 .job-application button {
   margin-top: 20px;
   padding: 12px;
