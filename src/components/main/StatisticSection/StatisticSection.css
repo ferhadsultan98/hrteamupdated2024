@@ -24,8 +24,8 @@
 }
 
 .stat:hover {
-  background-color: #f0f8ff; /* Change background color on hover */
-  transform: scale(1.05); /* Slightly enlarge on hover */
+  background-color: #f0f8ff; 
+  transform: scale(1.05); 
 }
 
 .stat-content {
@@ -50,11 +50,11 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.6); /* Semi-transparent background */
+  background: rgba(0, 0, 0, 0.6); 
   color: #fff;
   padding: 20px;
   text-align: center;
-  opacity: 0; /* Hidden by default */
+  opacity: 0; 
   transition: opacity 0.3s;
   display: flex;
   align-items: center;
@@ -63,7 +63,7 @@
 }
 
 .stat:hover .stat-info {
-  opacity: 1; /* Show on hover */
+  opacity: 1; 
 }
 .stat-info p{
   color: white;

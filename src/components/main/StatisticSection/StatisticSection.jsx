@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import './Fivesection.css';
+import './StatisticSection.css';
 
-const Fivesection = () => {
+const StatisticSection = () => {
   const [counters, setCounters] = useState({
     stat1: 0,
     stat2: 0,
@@ -47,10 +47,10 @@ const Fivesection = () => {
           <div className="stat-number">
             {counters.stat1}+
           </div>
-          <p>Müşteri Sayısı</p>
+          <p>Müştərilərin Sayı</p>
         </div>
         <div className="stat-info">
-          <p>Detaylı Bilgi: Müşterilerimizin memnuniyeti her geçen gün artıyor!</p>
+        <p>Ətraflı Məlumat: Müştərilərimizin məmnuniyyəti günü-gündən artır!</p>
         </div>
       </div>
       <div className="stat">
@@ -58,10 +58,10 @@ const Fivesection = () => {
           <div className="stat-number">
             {counters.stat2}+
           </div>
-          <p>Proje Tamamlandı</p>
+          <p>Layihə Tamamlandı</p>
         </div>
         <div className="stat-info">
-          <p>Detaylı Bilgi: Tamamlanan projelerimizin başarı oranı yüksek.</p>
+        <p>Ətraflı məlumat: Tamamlanmış layihələrimiz yüksək müvəffəqiyyət dərəcəsinə malikdir.</p>
         </div>
       </div>
       <div className="stat">
@@ -69,14 +69,14 @@ const Fivesection = () => {
           <div className="stat-number">
             {counters.stat3}+
           </div>
-          <p>Ödüller</p>
+          <p>Mükafatlar</p>
         </div>
         <div className="stat-info">
-          <p>Detaylı Bilgi: Kazandığımız ödüller ile sektördeki başarımızı gösteriyoruz.</p>
+        <p>Ətraflı məlumat: Sektordakı uğurlarımızı qazandığımız mükafatlarla göstəririk.</p>
         </div>
       </div>
     </div>
   );
 };
 
-export default Fivesection;
+export default StatisticSection;

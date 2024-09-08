@@ -15,44 +15,63 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 
 const Header = () => {
-  useEffect(() => {
-    Aos.init();
-  }, []);
-  
   const { t, i18n } = useTranslation();
   const location = useLocation();
   const navigate = useNavigate();
+
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrollProgress, setScrollProgress] = useState(0);
   const [languageMenuOpen, setLanguageMenuOpen] = useState(false);
   const [isSearchVisible, setSearchVisible] = useState(false);
+  const [isSearchAnimatingOut, setSearchAnimatingOut] = useState(false);
 
-  const handleScroll = () => {
-    const scrollTop = window.scrollY;
-    const docHeight = document.documentElement.scrollHeight;
-    const winHeight = window.innerHeight;
-    const totalDocScroll = docHeight - winHeight;
-    const scrollPercent = (scrollTop / totalDocScroll) * 100;
-    setScrollProgress(scrollPercent);
-
-    setScrolled(scrollTop > 0);
-  };
-
+  // Initialize AOS (Animate On Scroll)
   useEffect(() => {
+    Aos.init();
+  }, []);
+
+  // Handle scrolling
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight;
+      const winHeight = window.innerHeight;
+      const totalDocScroll = docHeight - winHeight;
+      const scrollPercent = (scrollTop / totalDocScroll) * 100;
+
+      setScrollProgress(scrollPercent);
+      setScrolled(scrollTop > 0);
+    };
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Toggle menu
   const toggleMenu = () => setMenuOpen(!menuOpen);
-  const toggleLanguageMenu = () => setLanguageMenuOpen(!languageMenuOpen);
-  const handleSearchClick = () => setSearchVisible(true);
-  const handleCloseSearch = () => setSearchVisible(false);
 
+  // Toggle language menu
+  const toggleLanguageMenu = () => setLanguageMenuOpen(!languageMenuOpen);
+
+  // Show search overlay
+  const handleSearchClick = () => {
+    setSearchVisible(true);
+    setSearchAnimatingOut(false);
+  };
+
+  // Hide search overlay with animation
+  const handleCloseSearch = () => {
+    setSearchAnimatingOut(true);
+    setTimeout(() => setSearchVisible(false), 500); // Match animation duration
+  };
+
+  // Scroll down
   const scrollPageDown = () => {
     window.scrollBy({ top: 830, behavior: 'smooth' });
   };
 
+  // Change language
   const changeLanguage = (lng) => {
     const newPath = location.pathname.replace(`/${i18n.language}`, `/${lng}`);
     navigate(newPath);
@@ -60,12 +79,26 @@ const Header = () => {
     setLanguageMenuOpen(false);
   };
 
-  const currentLanguage = i18n.language; 
-  const basePath = `/${currentLanguage}`; 
+  const currentLanguage = i18n.language;
+  const basePath = `/${currentLanguage}`;
+
+  // Handle body overflow based on menu state
+  useEffect(() => {
+    if (menuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+
+    // Cleanup function to reset overflow style
+    return () => {
+      document.body.style.overflow = 'auto';
+    };
+  }, [menuOpen]);
 
   return (
     <header className={scrolled ? "scrolled" : ""}>
-      {/* Progress Bar */}
+      {/* Top Header */}
       <div className="topheader">
         <div className="contactsu">
           <div className="phone">
@@ -96,6 +129,7 @@ const Header = () => {
         </div>
       </div>
 
+      {/* Bottom Header */}
       <div className="BottomHeader">
         <div className="progress-bar" style={{ width: `${scrollProgress}%` }}></div>
         <div className="LogoSide">
@@ -112,7 +146,7 @@ const Header = () => {
           <li className="dropdown">
             <Link to={basePath} className='firsta'>
               {t('header.services')}
-              <i><RiArrowDownWideFill className="arrow-icon" /></i>
+              <RiArrowDownWideFill className="arrow-icon" />
             </Link>
             <ul className="dropdown-menu">
               <li><Link to={`${basePath}/services/oneservice`}>{t('header.service1')}</Link></li>
@@ -133,10 +167,7 @@ const Header = () => {
           </li>
         </ul>
 
-        <button 
-          className="hirebutton"
-          onClick={scrollPageDown}
-        >
+        <button className="hirebutton" onClick={scrollPageDown}>
           <span className="text"><Link to={`${basePath}/contact`}>{t('header.startbtn')}</Link></span>
           <div className="wave" />
         </button>
@@ -148,54 +179,51 @@ const Header = () => {
             </button>
             {languageMenuOpen && (
               <ul className="language-dropdown">
-                <li onClick={() => changeLanguage('az')}><Flag code="AZ" />  </li>
-                <li onClick={() => changeLanguage('en')}><Flag code="GB" />  </li>
-                <li onClick={() => changeLanguage('ru')}><Flag code="RU" />  </li>
+                <li onClick={() => changeLanguage('az')}><Flag code="AZ" /></li>
+                <li onClick={() => changeLanguage('en')}><Flag code="GB" /></li>
+                <li onClick={() => changeLanguage('ru')}><Flag code="RU" /></li>
               </ul>
             )}
           </div>
           <div className="hamburger">
             <Hamburger toggled={menuOpen} toggle={setMenuOpen} />
           </div>
-          <button className="search-icon" onClick={handleSearchClick}><b><CiSearch /></b></button>
+          <button className="search-icon" onClick={handleSearchClick}><CiSearch /></button>
         </div>
       </div>
 
+      {/* Search Overlay */}
       {isSearchVisible && (
-  <div className={`search-overlay ${isSearchVisible ? 'active' : 'not-active'}`}>
-    <button className="close-button" onClick={handleCloseSearch}><b><AiTwotoneCloseCircle /></b></button>
-    <div className="search-container"
-      data-aos="fade-up"
-      data-aos-duration="3000"
-      data-aos-delay="400">
-      <input
-        type="text"
-        className="search-input"
-        placeholder="Search..."
-      />
-    </div>
-    <div className="news-section">
-        <h2>Latest HR News</h2>
-        <div className="news-cards">
-          <div className="news-card">
-            <h3>News Title 1</h3>
-            <p>Brief description of the news article. This is where the summary goes.</p>
-            <a href="#">Read more</a>
-          </div>
-          <div className="news-card">
-            <h3>News Title 2</h3>
-            <p>Brief description of the news article. This is where the summary goes.</p>
-            <a href="#">Read more</a>
-          </div>
-          <div className="news-card">
-            <h3>News Title 3</h3>
-            <p>Brief description of the news article. This is where the summary goes.</p>
-            <a href="#">Read more</a>
+        <div className={`search-overlay ${isSearchAnimatingOut ? 'not-active' : 'active'}`}>
+          <button className="close-button" onClick={handleCloseSearch}><AiTwotoneCloseCircle /></button>
+          <div className="search-container"
+            data-aos="fade-up"
+            data-aos-duration="3000"
+            data-aos-delay="400">
+            <input type="text" className="search-input" placeholder="Search..." />
+            <div className="news-section">
+              <h2>Latest HR News</h2>
+              <div className="news-cards">
+                <div className="news-card">
+                  <h3>News Title 1</h3>
+                  <p>Brief description of the news article. This is where the summary goes.</p>
+                  <a href="#">Read more</a>
+                </div>
+                <div className="news-card">
+                  <h3>News Title 2</h3>
+                  <p>Brief description of the news article. This is where the summary goes.</p>
+                  <a href="#">Read more</a>
+                </div>
+                <div className="news-card">
+                  <h3>News Title 3</h3>
+                  <p>Brief description of the news article. This is where the summary goes.</p>
+                  <a href="#">Read more</a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
-  </div>
-)}
+      )}
     </header>
   );
 };

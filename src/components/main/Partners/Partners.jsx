@@ -1,5 +1,5 @@
 import React from 'react'
-import "../../main/twosection/twosection.css";
+import "./Partners.css";
 import Partner1 from '../../../assets/partner/psgfinans.png'
 import Partner2 from '../../../assets/partner/safcatering.avif'
 import Partner3 from '../../../assets/partner/socar.avif'
@@ -7,10 +7,10 @@ import Partner4 from '../../../assets/partner/tacs.png'
 import Partner5 from '../../../assets/partner/yunikteam.svg'
 
 
-let TwoSection = () => {
+let Partners = () => {
 return(
 
-    <div className="bodys">
+    <div className="twosection-bodys">
     <div className="slider">
   <div className="slide-track">
     <div className="slide">
@@ -125,4 +125,4 @@ return(
 
 
 
-export default TwoSection
+export default Partners;

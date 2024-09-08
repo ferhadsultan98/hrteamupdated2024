@@ -16,9 +16,28 @@
     "startbtn": "Hire me"
   },
   "main": {
-    "onecaption": "Human Resources Management: Effective strategies to increase productivity and ensure employee satisfaction.",
-    "twocaption": "Recruitment Processes: Innovative methods to select the best candidates and optimize recruitment processes.",
-    "threecaption": "Employee Development: Supporting employees' career goals through training and development programs."
+    "onesectiononecaption": "Human Resources Management: Effective strategies to increase productivity and ensure employee satisfaction.",
+    "onesectiontwocaption": "Recruitment Processes: Innovative methods to select the best candidates and optimize recruitment processes.",
+    "onesectionthreecaption": "Employee Development: Supporting employees' career goals through training and development programs.",
+    "threesectiontitle": "Our areas of activity",
+    "threesectiononeheader": "Talent Acquisition",
+    "threesectiononecaption": "Expert strategies for attracting and hiring the best talent to fit your company's needs.",
+    "threesectiontwoheader": "Employee Benefits",
+    "threesectiontwocaption": "Comprehensive benefits packages designed to attract and retain top talent.",
+    "threesectionthreeheader": "Training & Development",
+    "threesectionthreecaption": "Programs and workshops aimed at enhancing employee skills and career growth.",
+    "threesectionfourheader": "Performance Management",
+    "threesectionfourcaption": "Systems and strategies to assess and improve employee performance effectively.",
+    "threesectionfiveheader": "Employee Engagement",
+    "threesectionfivecaption": "Techniques and strategies to foster a positive work environment and improve employee satisfaction.",
+    "commentsectionopinions": "Share your opinion with us",
+    "commentsectionplaceholderone": "Write your comment here...",
+    "commentsectionplaceholdertwo": "Your name and qualification",
+    "commentsectiongendersection": "Select your gender",
+    "commentsectiongenderfemale": "Female",
+    "commentsectiongendermale": "Male",
+    "commentsectionwritecomment": "Write a comment",
+    "commentsectionclientcomments": "Client Comments"
   },
   "footer": {
     "usefullinks": "Useful links",
@@ -30,7 +49,7 @@
     "inputholder": "Write an email"
   },
   "notfoundpage": {
-      "title": "Something went wrong!",
-      "backtomain": "Back to main page."
+    "title": "Something went wrong!",
+    "backtomain": "Back to main page."
   }
 }

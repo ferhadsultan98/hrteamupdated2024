@@ -1,67 +1,62 @@
-
 .Threesection {
   text-align: center;
   margin-bottom: 3vh;
 }
-
+.Threesection .slick-initialized .slick-slide{
+  padding: 20px;
+}
 .Threesection h1 {
   font-size: 2.5rem;
-  margin-bottom: 2rem;
 }
 
-/* Slider Konteyneri */
 .ThreeSectionSlider {
-  width: 90%; /* Genişliği biraz daraltalım */
+  width: 90%;
   margin: 0 auto;
 }
 
 .ThreeSectionSlider .slick-slide {
   display: flex;
   justify-content: center;
-  padding: 0 5px; /* Kartlar arasındaki boşluğu azalt */
+  padding: 0 5px;
 }
 
-/* Kart Konteyneri */
 .ExpertiseCards {
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
-  width: 100%; /* Slider için %100 genişlik */
-  max-width: 450px; /* Kart genişliğini sınırla */
- height: 350px;
+  width: 100%;
+  max-width: 450px;
+  height: 350px;
   cursor: pointer;
   text-align: center;
   position: relative;
   padding: 1rem;
-  border: 2px solid transparent; /* Varsayılan sınır */
+  border: 2px solid transparent;
 }
 
-/* Hover Efekti */
 .ExpertiseCards:hover {
   transform: translateY(-10px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  border: 2px solid #007bff; /* Hover'da vurgulanan sınır */
+  border: 2px solid #007bff;
   box-shadow: 0px 0px 30px 1px rgba(0, 255, 117, 0.30);
 }
 
-/* Kartın Ana Görsel Bölümü */
 .OneCardMain {
-  height: 100%; /* Mobil için daha uygun yükseklik */
-  width: 100%; /* Mobil ekran genişliğine uyumlu */
+  height: 100%;
+  width: 100%;
   overflow: hidden;
 }
 
 .OneCardMain img {
-  width: 100%; /* Tam genişlik */
-  height: 100%; /* Kart yüksekliğine göre ayarlanır */
-  object-fit: cover; /* Resmin kapsayıcıyı tamamen doldurmasını sağlar */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   display: block;
-  margin: 0 auto; /* Görseli ortalamak için */
+  margin: 0 auto;
 }
 
-/* Kartın Alt Bölümü */
 .OneCardFooter {
   padding: 1rem;
   background: #fff;
@@ -70,35 +65,32 @@
   left: 0;
   right: 0;
   transition: opacity 0.3s ease;
-  opacity: 0; /* Başlangıçta gizli */
+  opacity: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .ExpertiseCards:hover .OneCardFooter {
-  opacity: 1; /* Hover'da göster */
+  opacity: 1;
 }
 
 .OneCardFooter h3 {
-  font-size: 1rem; /* Mobilde daha küçük başlık */
+  font-size: 1rem;
   margin: 0.5rem 0;
   color: #333;
 }
 
 .OneCardFooter p {
-  font-size: 0.8rem; /* Mobilde daha küçük açıklama */
+  font-size: 0.8rem;
   color: #666;
   margin: 0;
   text-align: center;
 }
 
-/* Slider Dots Stili */
 .slick-dots {
   bottom: -30px;
 }
-
-/* Responsive Tasarım */
 
 @media (max-width: 768px) {
   .Threesection h1 {
@@ -106,7 +98,7 @@
   }
 
   .OneCardMain {
-    height: 150px; /* Daha küçük yüksekliği */
+    height: 150px;
   }
 
   .OneCardFooter h3 {
@@ -118,7 +110,7 @@
   }
 
   .ExpertiseCards {
-    max-width: 300px; /* Mobil görünümde daha dar kartlar */
+    max-width: 300px;
     height: 300px;
   }
 }
@@ -129,7 +121,7 @@
   }
 
   .OneCardMain {
-    height: 120px; /* Daha küçük yüksekliği */
+    height: 120px;
   }
 
   .OneCardFooter h3 {
@@ -141,6 +133,6 @@
   }
 
   .ExpertiseCards {
-    max-width: 300px; /* Daha dar kartlar */
+    max-width: 300px;
   }
 }

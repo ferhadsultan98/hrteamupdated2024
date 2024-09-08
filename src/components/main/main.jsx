@@ -1,10 +1,13 @@
 import React from "react";
 import "../main/main.css"
-import TwoSection from "./twosection/twosection";
-import Slider from "./onesection/onesection";
-import Fivesection from "./fivesection/Fivesection";
-import Commentsection from "./sixsection/Sixsection"
-import MainThreeSection from "./threesection/MainThreeSection";
+import CommentSection from "./Commentsection/Commentsection";
+import StatisticSection from "./StatisticSection/StatisticSection";
+import SliderMain from "./MainHeadSlider/MainHeadSlider.jsx";
+import Partners from "./Partners/Partners.jsx";
+import Activity from "./Activity/Activity.jsx";
+
+
+
 
 
 
@@ -12,11 +15,11 @@ import MainThreeSection from "./threesection/MainThreeSection";
 let Main = () => {
   return (
     <>
-      <Slider />
-      <TwoSection />
-      <MainThreeSection/>
-      <Commentsection/>
-      <Fivesection />
+      <SliderMain />
+      <Partners />
+      <Activity />
+      <CommentSection />
+      <StatisticSection />
     </>
   );
 };

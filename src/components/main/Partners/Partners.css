@@ -1,4 +1,4 @@
-.bodys {
+.twosection-bodys {
 	align-items: center;
 	display: flex;
 	justify-content: center;
@@ -12,8 +12,7 @@
 	100% { transform: translateX(-50%); }
 }
 
-/* .slider styling */
-.slider {
+.twosection-bodys .slider {
 	background: white;
 	box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
 	height: 100px;
@@ -22,52 +21,52 @@
 	width: 100%;
 }
 
-/* .slide-track styling */
-.slider .slide-track {
-	animation: scroll 20s linear infinite; /* Use actual animation time here */
+
+.twosection-bodys .slider .slide-track {
+	animation: scroll 20s linear infinite; 
 	display: flex;
 	flex-wrap: nowrap;
-	justify-content: space-around; /* Adjust as needed */
-	min-width: 200%; /* Adjust based on number of slides */
+	justify-content: space-around; 
+	min-width: 200%; 
 	position: absolute;
 	gap: 60px;
 	top: 0;
 	left: 0;
-	width: auto; /* Adjust width as needed */
+	width: auto; 
 }
 
-/* .slide styling */
-.slider .slide {
-	height: 100px; /* Adjust height as needed */
+
+.twosection-bodys .slider .slide {
+	height: 100px; 
 }
 
-/* Pause animation on hover */
-.slider:hover .slide-track {
+
+.twosection-bodys .slider:hover .slide-track {
 	animation-play-state: paused;
 }
 
-/* Hover effect on slides */
-.slider .slide {
+
+.twosection-bodys .slider .slide {
 	filter: grayscale(100%);
 	transition: 300ms all linear;
 }
 
-.slider .slide:hover {
+.twosection-bodys .slider .slide:hover {
 	filter: none;
 }
 
 @media (max-width: 767px){
-	.slider .slide a img{
+	.twosection-bodys .slider .slide a img{
 		height: 40px;
 		width: 50px;
 	}
-	.slider{
+	.twosection-bodys .slider{
 		height: 60px;
 	}
-	.slider .slide{
+	.twosection-bodys .slider .slide{
 		height: 60px;
 	}
-	.bodys{
+	.twosection-bodys{
 		height: 15vh;
 	}
 }

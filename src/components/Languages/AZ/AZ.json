@@ -16,9 +16,28 @@
         "startbtn": "İşə başlayın"
     },
     "main": {
-        "onecaption": "İnsan Resurslarının İdarə Edilməsi: Məhsuldarlığı artırmaq və işçilərin məmnuniyyətini təmin etmək üçün effektiv strategiyalar.",
-        "twocaption": "İşə qəbul prosesləri: Ən yaxşı namizədləri seçmək və işə qəbul proseslərini optimallaşdırmaq üçün innovativ üsullar.",
-        "threecaption": "İşçilərin İnkişafı: Təlim və inkişaf proqramları vasitəsilə işçilərin karyera məqsədlərinə dəstək."
+        "onesectiononecaption": "İnsan Resurslarının İdarə Edilməsi: Məhsuldarlığı artırmaq və işçilərin məmnuniyyətini təmin etmək üçün effektiv strategiyalar.",
+        "onesectiontwocaption": "İşə qəbul prosesləri: Ən yaxşı namizədləri seçmək və işə qəbul proseslərini optimallaşdırmaq üçün innovativ üsullar.",
+        "onesectionthreecaption": "İşçilərin İnkişafı: Təlim və inkişaf proqramları vasitəsilə işçilərin karyera məqsədlərinə dəstək.",
+        "threesectiontitle": "Fəaliyyət sahələrimiz",
+        "threesectiononeheader": "İstedadların əldə edilməsi",
+        "threesectiononecaption": "Şirkətinizin ehtiyaclarına uyğun gələn ən yaxşı istedadı cəlb etmək və işə götürmək üçün ekspert strategiyaları.",
+        "threesectiontwoheader": "İşçilərin Müavinətləri",
+        "threesectiontwocaption": "Ən yüksək istedadı cəlb etmək və saxlamaq üçün nəzərdə tutulmuş hərtərəfli fayda paketləri.",
+        "threesectionthreeheader": "Təlim və İnkişaf",
+        "threesectionthreecaption": "İşçilərin bacarıqlarının və karyera yüksəlişinin artırılmasına yönəlmiş proqramlar və seminarlar.",
+        "threesectionfourheader": "Performans İdarəetmə",
+        "threesectionfourcaption": "İşçilərin fəaliyyətini effektiv şəkildə qiymətləndirmək və təkmilləşdirmək üçün sistemlər və strategiyalar.",
+        "threesectionfiveheader": "İşçilərin cəlb edilməsi",
+        "threesectionfivecaption": "Müsbət iş mühiti yaratmaq və işçilərin məmnunluğunu artırmaq üçün texnika və strategiyalar.",
+        "commentsectionopinions": "Fikirlərinizi bizimlə bölüşün",
+        "commentsectionplaceholderone": "Şərhinizi bura yazın...",
+        "commentsectionplaceholdertwo": "Adınız və Sahəniz",
+        "commentsectiongendersection": "Cinsiyyətinizi seçin",
+        "commentsectiongenderfemale": "Qadın",
+        "commentsectiongendermale": "Kişi",
+        "commentsectionwritecomment": "Şərh yazın",
+        "commentsectionclientcomments": "Müştəri şərhləri"
     },
     "footer": {
         "info": "Əlaqə",

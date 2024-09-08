@@ -1,51 +1,53 @@
 import React, { useState } from 'react';
-import './Sixsection.css';
+import './Commentsection.css';
+import { useTranslation } from 'react-i18next';
 
-// Erkek ve kadın avatarlarını tanımla
-const maleAvatar = 'https://randomuser.me/api/portraits/men/44.jpg'; // Erkek resmi
-const femaleAvatar = 'https://randomuser.me/api/portraits/women/44.jpg'; // Kadın resmi
+const maleAvatar = 'https://randomuser.me/api/portraits/men/44.jpg';
+const femaleAvatar = 'https://randomuser.me/api/portraits/women/44.jpg';
 
 const CommentSection = () => {
+  const { t } = useTranslation();
   const [testimonials, setTestimonials] = useState([
     {
       text: 'Bu şirkət həqiqətən əladır! Onların peşəkarlığı və müştəri diqqəti əladır.',
-      author: 'Farhad Sultan, Frontend Developer',
+      author: 'Farhad, Frontend Developer',
       date: new Date().toLocaleString(),
       gender: 'male',
     },
     {
       text: 'Xidmət keyfiyyəti gözləntilərimizdən xeyli yüksək idi. Mən tövsiyə edirəm!',
-      author: 'Asad Aliyev, Director',
+      author: 'Asad, Direktor',
       date: new Date().toLocaleString(),
       gender: 'male',
     },
     {
       text: 'Şirkətin dəstəyi və müştəri xidməti çox yaxşıdır. Məmnun qaldım.',
-      author: 'Leyla Abbasova, Designer',
+      author: 'Leyla, UI/UX dizayner',
       date: new Date().toLocaleString(),
       gender: 'female',
     },
     {
       text: 'Mükəmməl bir təcrübə yaşadım, xidmət çox peşəkardır!',
-      author: 'Ramil Məmmədov, Software Engineer',
+      author: 'Ramil , Proqramlaşdırma Mühəndisi',
       date: new Date().toLocaleString(),
       gender: 'male',
     },
     {
       text: 'İlk dəfə istifadə etdim və çox məmnun qaldım. Şiddətlə tövsiyə edirəm!',
-      author: 'Gülnar Əliyeva, Marketing Specialist',
+      author: 'Gülnar, Marketinq Mütəxəssisi',
       date: new Date().toLocaleString(),
       gender: 'female',
     },
     {
       text: 'Dəstək və müştəri xidmətləri çox yaxşı. Yenidən istifadə edəcəyəm.',
-      author: 'Elvin Cəfərov, Business Analyst',
+      author: 'Əli, Satınalma Mütəxəssisi',
       date: new Date().toLocaleString(),
       gender: 'male',
     },
   ]);
 
   const [newTestimonial, setNewTestimonial] = useState({ text: '', author: '', gender: '' });
+  const [animationClass, setAnimationClass] = useState('');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -67,9 +69,10 @@ const CommentSection = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (newTestimonial.text && newTestimonial.author && newTestimonial.gender) {
+      setAnimationClass('slide-in'); // Trigger animation
       setTestimonials((prev) => [
+        { ...newTestimonial, date: new Date().toLocaleString(), animation: 'slide-in' },
         ...prev,
-        { ...newTestimonial, date: new Date().toLocaleString() },
       ]);
       setNewTestimonial({ text: '', author: '', gender: '' });
     }
@@ -78,13 +81,13 @@ const CommentSection = () => {
   return (
     <div className="testimonials">
       <div className="testimonial-form">
-        <h3>Fikrinizi bizimlə bölüşün</h3>
+        <h3>{t('main.commentsectionopinions')}</h3>
         <form onSubmit={handleSubmit}>
           <textarea
             name="text"
             value={newTestimonial.text}
             onChange={handleChange}
-            placeholder="Şərhinizi bura yazın..."
+            placeholder={t('main.commentsectionplaceholderone')}
             required
           ></textarea>
           <input
@@ -92,10 +95,9 @@ const CommentSection = () => {
             name="author"
             value={newTestimonial.author}
             onChange={handleChange}
-            placeholder="Adınız və Sahəniz"
+            placeholder={t('main.commentsectionplaceholdertwo')}
             required
             pattern="[A-Za-z\s]*"
-            title="Zəhmət olmasa yalnız hərf və boşluq daxil edin."
           />
           <select
             name="gender"
@@ -103,17 +105,29 @@ const CommentSection = () => {
             onChange={handleChange}
             required
           >
-            <option value="">Cinsiyyətinizi seçin</option>
-            <option value="male">Kişi</option>
-            <option value="female">Qadın</option>
+            <option value="">{t('main.commentsectiongendersection')}</option>
+            <option value="male">{t('main.commentsectiongendermale')}</option>
+            <option value="female">{t('main.commentsectiongenderfemale')}</option>
           </select>
-          <button type="submit">Şərh Yaz</button>
+          <button type="submit">{t('main.commentsectionwritecomment')}</button>
         </form>
       </div>
-      <h2>Müştəri Şərhləri</h2>
+      <h2>{t('main.commentsectionclientcomments')}</h2>
       <div className="testimonial-container">
         {testimonials.map((testimonial, index) => (
-          <div key={index} className="testimonial-item">
+          <div
+            key={index}
+            className={`testimonial-item ${testimonial.animation || ''}`}
+            onAnimationEnd={() => {
+              // Remove the animation class after animation ends
+              setTestimonials((prev) =>
+                prev.map((item, i) =>
+                  i === index ? { ...item, animation: '' } : item
+                )
+              );
+              setAnimationClass(''); // Reset the animation class
+            }}
+          >
             <div className="testimonial-avatar">
               <img
                 src={testimonial.gender === 'female' ? femaleAvatar : maleAvatar}

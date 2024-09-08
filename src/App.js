@@ -18,8 +18,6 @@ import EightService from './components/services/serviceslist/eightservice';
 import NotFound from './components/notfound404/notfound';
 import Loader from './components/loader/loader'; 
 import Chat from './components/chat/Chat';
-import SubscriptionAlert from './components/SubscribeAlert/SubscriptionAlert';
-
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -57,7 +55,7 @@ function App() {
               <Route path="*" element={<NotFound />} />
             </Routes>
             <Chat />
-            <SubscriptionAlert/>
+
           </Layout>
         </BrowserRouter>
       )}

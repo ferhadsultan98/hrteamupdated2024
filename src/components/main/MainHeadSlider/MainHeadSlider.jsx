@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
-import './onesection.css'; 
+import './MainHeadSlider.css'; 
 import { MdArrowForwardIos, MdArrowBackIos } from "react-icons/md";
 import { useTranslation } from 'react-i18next';
-import imagesData from './oneslider.json'; 
+import imagesData from './MainHeadSlider.json'
 
-const Slider = () => {
+const SliderMain = () => {
   const [imageIndex, setImageIndex] = useState(0);
   const intervalRef = useRef(null);
   const sliderRef = useRef(null);
@@ -75,4 +75,4 @@ const Slider = () => {
   );
 };
 
-export default Slider;
+export default SliderMain;
