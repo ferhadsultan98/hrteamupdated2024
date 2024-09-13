@@ -9,6 +9,7 @@
     "@testing-library/user-event": "^13.5.0",
     "ajv": "8.6.1",
     "aos": "^2.3.4",
+    "chart.js": "^4.4.4",
     "hamburger-react": "^2.5.1",
     "i18next": "^23.12.2",
     "react": "^18.3.1",
@@ -21,7 +22,8 @@
     "react-slick": "^0.30.2",
     "react-world-flags": "^1.6.0",
     "slick-carousel": "^1.8.1",
-    "web-vitals": "^2.1.4"
+    "web-vitals": "^2.1.4",
+    "xlsx": "^0.18.5"
   },
   "scripts": {
     "start": "react-scripts start",

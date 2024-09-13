@@ -1,17 +1,17 @@
+/* Genel stil ayarları */
 .chat-widget {
     position: fixed;
     bottom: 20px;   
     right: 20px;    
-    z-index: 999999999999000;   
+    z-index: 10;   
 }
-
 
 .chat-button {
     background-color: #007bff; 
     color: white;            
     border: none;           
     border-radius: 50%;    
-    padding: 10px 10px;    
+    padding: 10px;    
     cursor: pointer;   
     font-size: 38px; 
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -20,6 +20,7 @@
     height: 60px;
     animation: messageBounce 1s ease-in-out infinite;
 }
+
 @keyframes messageBounce {
     0% {
       transform: translateY(0);
@@ -30,12 +31,14 @@
     100% {
       transform: translateY(0);
     }
-  }
+}
+
 .chat-button:hover {
     background-color: #0056b3; 
     transform: scale(1.05); 
 }
 
+/* Chat kutusu stil ayarları */
 .chat-box {
     background-color: #fff;    
     border: 1px solid #ddd;  
@@ -47,6 +50,7 @@
     position: relative;       
 }
 
+/* Chat başlık stil ayarları */
 .chat-header {
     background-color: #007bff; 
     color: white;             
@@ -56,6 +60,7 @@
     position: relative;       
 }
 
+/* Kapama butonu stil ayarları */
 .close-button {
     position: absolute;
     top: 50%;
@@ -75,6 +80,7 @@
     color: #ffdddd; 
 }
 
+/* Mesajlar bölümü stil ayarları */
 .chat-messages {
     padding: 10px;          
     height: 300px;           
@@ -117,6 +123,7 @@
     font-style: italic; 
 }
 
+/* Mesaj gönderme butonları stil ayarları */
 .messagebuttons {
     display: flex;
     align-items: center;
@@ -132,10 +139,40 @@
     color: white;
 }
 
+/* Chat giriş alanı stil ayarları */
 .chat-input {
     width: calc(100% - 20px); 
     padding: 10px;            
     border: 1px solid #ddd;  
     border-bottom-left-radius: 5px; 
     border-bottom-right-radius: 5px; 
+}
+
+/* Kullanıcı bilgileri formu stil ayarları */
+.user-details-form {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.user-details-form input {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.user-details-form button {
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background-color 0.3s;
+}
+
+.user-details-form button:hover {
+    background-color: #0056b3;
 }

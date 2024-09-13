@@ -1,0 +1,75 @@
+.sidebar {
+  width: 250px;
+  background-color: rgb(0,123,255);
+  color: #fff;
+  height: 100%;
+  padding: 20px;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.sidebar .logo h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar nav ul li {
+  margin: 10px 0;
+  position: relative;
+}
+
+.sidebar nav ul li a {
+  color: black;
+  text-decoration: none;
+  display: block;
+  padding: 15px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  font-weight: 600;
+}
+
+.sidebar nav ul li a:hover {
+  background-color: #2a2a2a;
+  transform: scale(1.05);
+}
+
+.sidebar .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #2a2a2a;
+  min-width: 180px;
+  border-radius: 6px;
+  top: 100%;
+  left: 0;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  transform: translateY(10px);
+}
+
+.sidebar .dropdown-content a {
+  color: #ddd;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
+}
+
+.sidebar .dropdown-content a:hover {
+  background-color: #3a3a3a;
+}
+
+.sidebar .dropdown.open .dropdown-content {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+  z-index: 9;
+}

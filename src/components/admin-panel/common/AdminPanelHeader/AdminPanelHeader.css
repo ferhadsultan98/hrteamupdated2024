@@ -1,0 +1,52 @@
+/* Top Menu */
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #00A97F; /* Renk kodunuzu kullanın */
+    padding: 10px 20px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.topbar input {
+    padding: 5px;
+    border: none;
+    border-radius: 4px;
+}
+
+.user-profile {
+    display: flex;
+    align-items: center;
+}
+
+.user-profile img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.user-profile h2 {
+    margin-right: 20px; /* Kullanıcı adının butonla arası için boşluk */
+}
+
+/* Logout Button */
+.logout-button {
+    background-color: #ff4d4d; /* Çıkış butonunun arka plan rengi */
+    color: #fff; /* Buton üzerindeki metin rengi */
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Arka plan rengi ve hover animasyonu */
+}
+
+.logout-button:hover {
+    background-color: #cc0000; /* Hover efekti için renk */
+    transform: scale(1.05); /* Hover efekti için büyütme */
+}
+
+.logout-button:focus {
+    outline: none; /* Butona tıklandığında kenarlık olmaması için */
+}

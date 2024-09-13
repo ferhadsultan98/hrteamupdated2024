@@ -45,7 +45,7 @@ const Chat = () => {
                     ]);
                 }
                 setShowWaitingMessage(false);
-            }, 2000); // 2 saniye bekle
+            }, 2000); 
         }
     };
 
@@ -59,7 +59,7 @@ const Chat = () => {
             {isOpen && (
                 <div className="chat-box">
                     <div className="chat-header">
-                        Canlı Sohbet
+                        Canlı Söhbət
                         <button className="close-button" onClick={closeChatBox} aria-label="Close chat">
                             &times;
                         </button>

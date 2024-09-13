@@ -1,0 +1,26 @@
+/* AdminPanelLayout.css */
+.admin-panel-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh; /* Yüksekliği tam ekran yapar */
+  }
+  
+  .admin-panel-header {
+    flex: 0 0 auto; /* Sabit yükseklikte olur */
+  }
+  
+  .admin-panel-content {
+    display: flex;
+    flex: 1 1 auto; /* Kalan alanı kaplar */
+  }
+  
+  .admin-panel-sidebar {
+    flex: 0 0 250px; /* Sabit genişlikte olur */
+    width: 250px;
+  }
+  
+  .admin-panel-main {
+    flex: 1 1 auto; /* Kalan alanı kaplar */
+    padding: 20px; /* İçeriğe biraz boşluk verir */
+  }
+  
