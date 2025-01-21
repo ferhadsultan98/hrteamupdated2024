@@ -118,7 +118,7 @@ Contributions are welcome! To contribute:
 
 For any questions, suggestions, or collaboration opportunities, feel free to reach out to me via the following channels:
 
-- - [![LinkedIn](https://img.shields.io/badge/-LinkedIn-blue?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/farhadsultan)  
+- [![LinkedIn](https://img.shields.io/badge/-LinkedIn-blue?logo=linkedin&logoColor=white)](https://www.linkedin.com/in/farhadsultan)  
 - [![Instagram](https://img.shields.io/badge/-Instagram-E4405F?logo=instagram&logoColor=white)](https://www.instagram.com/ferhad.sultann)  
 - [![WhatsApp](https://img.shields.io/badge/-WhatsApp-25D366?logo=whatsapp&logoColor=white)](https://wa.me/+994555254193)  
 - [![Email](https://img.shields.io/badge/-Email-D14836?logo=gmail&logoColor=white)](mailto:sultanoworks@gmail.com)
