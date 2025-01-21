@@ -29,10 +29,10 @@ Welcome to the **HR Team Website** project! This is a modern, interactive, and u
 ## Technologies Used
 
 - **Frontend**: React, React Router
-- **Styling**: CSS, SCSS, TailwindCSS (optional)
+- **Styling**: CSS
 - **Animations**: Framer Motion, GSAP
 - **State Management**: Redux, Context API
-- **Icons**: FontAwesome, Material-UI Icons
+- **Icons**: FontAwesome, Material-UI Icons, React Fonts Library
 
 ---
 
@@ -114,6 +114,14 @@ Contributions are welcome! To contribute:
 
 ---
 
-## License
+## Contact Me
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+For any questions, suggestions, or collaboration opportunities, feel free to reach out to me via the following channels:
+
+- **LinkedIn**: [Your LinkedIn Profile](https://www.linkedin.com/in/farhadsultan)
+- **Instagram**: [Your Instagram Handle](https://www.instagram.com/ferhad.sultann)
+- **WhatsApp**: [+123 456 7890](https://wa.me/+994555254193)
+- **Email**: [your.email@example.com](mailto:sultanoworks@gmail.com)
+
+Looking forward to connecting with you!
+                                               2025 Sultanov Farhad
