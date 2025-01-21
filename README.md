@@ -126,4 +126,6 @@ For any questions, suggestions, or collaboration opportunities, feel free to rea
 Looking forward to connecting with you!
 
 Looking forward to connecting with you!
-                                               2025 Sultanov Farhad
+                                               
+                                                
+                                                2025 Sultanov Farhad
