@@ -32,8 +32,6 @@ const RouterWrapper = () => {
     <>
       <Routes>
         <Route path="/" element={<Navigate to="/az" />} />
-
-       
         <Route path="/:lang" element={<Layout><Main /></Layout>} />
         <Route path="/:lang/about" element={<Layout><About /></Layout>} />
         <Route path="/:lang/services" element={<Layout><Services /></Layout>} />
@@ -49,7 +47,6 @@ const RouterWrapper = () => {
         <Route path="/:lang/services/eightservice" element={<Layout><EightService /></Layout>} />
         <Route path="*" element={<Layout><NotFound /></Layout>} />
 
-        {/* Admin Panel Routes */}
         <Route path="/loginpage" element={isAuthenticated ? <Navigate to="/loginpage" /> : <LoginPage />} />
         <Route path="/admin" element={isAuthenticated ? <Navigate to="/admin/dashboard" /> : <LoginPage />} />
         <Route path="/admin/dashboard" element={isAuthenticated ? <AdminPanelLayout><Dashboard /></AdminPanelLayout> : <Navigate to="/admin" />} />
