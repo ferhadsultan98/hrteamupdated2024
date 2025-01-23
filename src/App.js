@@ -33,7 +33,7 @@ const RouterWrapper = () => {
       <Routes>
         <Route path="/" element={<Navigate to="/az" />} />
 
-        {/* Dil kodları ile yönlendirmeler */}
+       
         <Route path="/:lang" element={<Layout><Main /></Layout>} />
         <Route path="/:lang/about" element={<Layout><About /></Layout>} />
         <Route path="/:lang/services" element={<Layout><Services /></Layout>} />
